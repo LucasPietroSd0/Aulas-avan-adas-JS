@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula de Arrays em JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            color: #0073e6;
+            text-align: center;
+        }
+
+        .section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #ffffff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            border-bottom: 2px solid #0073e6;
+            padding-bottom: 5px;
+        }
+
+        .code {
+            background-color: #f1f1f1;
+            padding: 10px;
+            border-radius: 5px;
+            font-family: monospace;
+            color: #333;
+            overflow-x: auto;
+        }
+
+        .highlight {
+            color: #d9534f;
+            font-weight: bold;
+        }
+
+        ul {
+            line-height: 1.8;
+        }
+
+        .note {
+            background-color: #e7f5ff;
+            padding: 10px;
+            border-left: 5px solid #0073e6;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Aula de Arrays em JavaScript</h1>
+
+    <div class="section">
+        <h2>1. Introdução aos Arrays</h2>
+        <p><span class="highlight">O que é um Array?</span> Arrays são listas ou coleções de dados em JavaScript. Eles permitem armazenar múltiplos valores em uma única variável.</p>
+        <div class="code">
+            let frutas = ["maçã", "banana", "laranja"];
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>2. Acessando Elementos</h2>
+        <p>Em JavaScript, os Arrays são indexados a partir de 0. O primeiro item tem índice 0, o segundo índice 1, e assim por diante.</p>
+        <div class="code">
+            console.log(frutas[0]); // Saída: "maçã"
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>3. Principais Métodos de Arrays</h2>
+        <ul>
+            <li><span class="highlight">push()</span> - Adiciona um elemento ao final do Array.</li>
+            <li><span class="highlight">pop()</span> - Remove o último elemento do Array.</li>
+            <li><span class="highlight">unshift()</span> - Adiciona um elemento ao início do Array.</li>
+            <li><span class="highlight">shift()</span> - Remove o primeiro elemento do Array.</li>
+        </ul>
+        <div class="code">
+            frutas.push("uva"); // Adiciona "uva" ao final<br>
+            frutas.pop();       // Remove o último elemento
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>4. Iterando em Arrays</h2>
+        <p>Você pode usar um loop <span class="highlight">for</span> básico para percorrer um Array, ou métodos como <span class="highlight">forEach()</span> e <span class="highlight">map()</span>:</p>
+        <div class="code">
+            for (let i = 0; i &lt; frutas.length; i++) {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;console.log(frutas[i]);<br>
+            }<br><br>
+            // Usando forEach<br>
+            frutas.forEach((fruta) => console.log(fruta));
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>5. Exemplos Práticos</h2>
+        <p>Mostre como o <span class="highlight">filter()</span>, <span class="highlight">map()</span> e <span class="highlight">reduce()</span> podem ser usados para manipular dados em Arrays.</p>
+        <div class="code">
+            let numeros = [1, 2, 3, 4, 5];<br>
+            let pares = numeros.filter(num => num % 2 === 0); // [2, 4]
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>6. Dicas e Boas Práticas</h2>
+        <div class="note">
+            <p><strong>Evite Arrays aninhados complexos:</strong> Arrays dentro de Arrays podem ser confusos para iniciantes.</p>
+            <p><strong>Imutabilidade:</strong> Explique a importância de criar uma cópia antes de modificar Arrays.</p>
+        </div>
+    </div>
+
+</body>
+</html>
+s

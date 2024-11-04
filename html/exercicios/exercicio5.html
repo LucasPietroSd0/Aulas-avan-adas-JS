@@ -1,0 +1,176 @@
+    s<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios de Arrays em JavaScript</title>
+    <style>
+        /* Estilos gerais */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f9fc;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #0073e6;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .exercise {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+
+        .exercise h2 {
+            color: #0073e6;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .exercise p {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        .code-snippet {
+            background-color: #f0f4f8;
+            border-left: 5px solid #0073e6;
+            border-radius: 5px;
+            font-family: monospace;
+            font-size: 0.9rem;
+            overflow-x: auto;
+            padding: 10px;
+            color: #333;
+            margin-top: 10px;
+        }
+
+        .code-snippet::before {
+            content: "Exemplo de Código:";
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Exercícios de Arrays em JavaScript</h1>
+    
+    <div class="container">
+
+        <!-- Exercícios Básicos -->
+
+        <div class="exercise">
+            <h2>1. Crie um Array de Cores</h2>
+            <p>Crie um Array chamado <code>cores</code> com pelo menos cinco cores. Exiba a terceira cor no console.</p>
+            <div class="code-snippet">
+                let cores = ["vermelho", "azul", "verde", "amarelo", "roxo"];<br>
+                console.log(cores[2]); // Saída: "verde"
+            </div>
+        </div>
+
+        <div class="exercise">
+            <h2>2. Adicionar e Remover Elementos</h2>
+            <p>Adicione uma cor ao final do Array <code>cores</code> usando <code>push()</code>. Remova a primeira cor do Array usando <code>shift()</code> e exiba o Array no console.</p>
+            <div class="code-snippet">
+                cores.push("laranja");<br>
+                cores.shift();<br>
+                console.log(cores);
+            </div>
+        </div>
+
+        <div class="exercise">
+            <h2>3. Acessando o Último Elemento</h2>
+            <p>Exiba o último elemento do Array <code>cores</code> sem alterar o Array.</p>
+            <div class="code-snippet">
+                console.log(cores[cores.length - 1]);
+            </div>
+        </div>
+
+        <div class="exercise">
+            <h2>4. Copiar Array</h2>
+            <p>Crie uma cópia do Array <code>cores</code> usando <code>slice()</code> e exiba a cópia no console.</p>
+            <div class="code-snippet">
+                let coresCopia = cores.slice();<br>
+                console.log(coresCopia);
+            </div>
+        </div>
+
+        <div class="exercise">
+            <h2>5. Concatenação de Arrays</h2>
+            <p>Crie um novo Array chamado <code>maisCores</code> e use <code>concat()</code> para unir <code>cores</code> e <code>maisCores</code>.</p>
+            <div class="code-snippet">
+                let maisCores = ["preto", "branco"];<br>
+                let todasAsCores = cores.concat(maisCores);<br>
+                console.log(todasAsCores);
+            </div>
+        </div>
+
+        <!-- Continuando com os outros exercícios -->
+
+        <div class="exercise">
+            <h2>6. Encontrando o Índice de um Elemento</h2>
+            <p>Encontre o índice de uma cor específica no Array <code>cores</code> usando <code>indexOf()</code>.</p>
+            <div class="code-snippet">
+                let indice = cores.indexOf("verde");<br>
+                console.log(indice); // Exemplo: Saída: 1
+            </div>
+        </div>
+
+        <div class="exercise">
+            <h2>7. Verificando se um Elemento Existe</h2>
+            <p>Verifique se a cor "azul" está no Array <code>cores</code> usando <code>includes()</code>.</p>
+            <div class="code-snippet">
+                let temAzul = cores.includes("azul");<br>
+                console.log(temAzul); // Saída: true ou false
+            </div>
+        </div>
+
+        <div class="exercise">
+            <h2>8. Tamanho do Array</h2>
+            <p>Crie um Array chamado <code>numeros</code> com 10 números e exiba o tamanho do Array no console.</p>
+            <div class="code-snippet">
+                let numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];<br>
+                console.log(numeros.length);
+            </div>
+        </div>
+
+        <div class="exercise">
+            <h2>9. Inversão do Array</h2>
+            <p>Use o método <code>reverse()</code> para inverter o Array <code>numeros</code> e exiba o resultado.</p>
+            <div class="code-snippet">
+                numeros.reverse();<br>
+                console.log(numeros);
+            </div>
+        </div>
+
+        <div class="exercise">
+            <h2>10. Contar Ocorrências</h2>
+            <p>Dado o Array <code>letras = ['a', 'b', 'a', 'c', 'a', 'b']</code>, conte quantas vezes a letra "a" aparece.</p>
+            <div class="code-snippet">
+                let letras = ['a', 'b', 'a', 'c', 'a', 'b'];<br>
+                let contagemA = letras.filter(letra => letra === 'a').length;<br>
+                console.log(contagemA); // Saída: 3
+            </div>
+        </div>
+
+        <!-- Exercícios intermediários seguem o mesmo padrão -->
+
+        <!-- Continuar até o exercício 15 da mesma forma... -->
+
+    </div>
+
+</body>
+</html>
