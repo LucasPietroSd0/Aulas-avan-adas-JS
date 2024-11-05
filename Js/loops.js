@@ -224,13 +224,59 @@ document.write("A media dos numeros é : " +media)
   
 10. Faça um programa que imprima na tela apenas os números ímpares entre 1 e 50.
 
-
+for (let i = 1; i <= 50; i++) {
+    if (i % 2 !== 0) {  // Verifica se o número é ímpar
+        document.write(i);  // Imprime o número ímpar
+    }
+}
   
 11. Faça um programa que receba dois números inteiros e gere os números inteiros que estão no
 intervalo compreendido por eles.
 
+  function gerarIntervalo() {
+    // Solicita os números ao usuário e os converte para inteiros
+    let num1 = parseInt(prompt("Informe o primeiro número inteiro:"));
+    let num2 = parseInt(prompt("Informe o segundo número inteiro:"));
+
+    // Verifica qual é o menor e o maior número
+    let inicio = Math.min(num1, num2);  // Menor número
+    let fim = Math.max(num1, num2);     // Maior número
+
+    // Laço para gerar os números no intervalo
+    for (let i = inicio + 1; i < fim; i++) {
+        document.write(i);  // Imprime os números no intervalo
+    }
+}
+
+// Chama a função
+gerarIntervalo();
   
 12. Altere o programa anterior para mostrar no final a soma dos números.
+
+  // Função para gerar números no intervalo entre dois números e calcular a soma
+function gerarIntervaloESomar() {
+    // Solicita os números ao usuário e os converte para inteiros
+    let num1 = parseInt(prompt("Informe o primeiro número inteiro:"));
+    let num2 = parseInt(prompt("Informe o segundo número inteiro:"));
+
+    // Verifica qual é o menor e o maior número
+    let inicio = Math.min(num1, num2);  // Menor número
+    let fim = Math.max(num1, num2);     // Maior número
+
+    let soma = 0; // Variável para armazenar a soma
+
+    // Laço para gerar os números no intervalo e calcular a soma
+    for (let i = inicio + 1; i < fim; i++) {
+        console.log(i);  // Imprime os números no intervalo
+        soma += i;       // Adiciona o número à soma
+    }
+
+    // Exibe a soma dos números
+    console.log(`A soma dos números no intervalo é: ${soma}`);
+}
+
+// Chama a função
+gerarIntervaloESomar();
 
   
 13. Desenvolva um gerador de tabuada, capaz de gerar a tabuada de qualquer número inteiro
@@ -243,6 +289,26 @@ a. Tabuada de 5:
 5 X 10 = 50
 b. Como fazer a tabuada
 
+function gerarTabuada() {
+    // Solicita o número ao usuário
+    let numero = parseInt(prompt("Informe um número entre 1 e 10 para ver a tabuada:"));
+
+    // Verifica se o número está no intervalo permitido
+    if (numero >= 1 && numero <= 10) {
+        document.write(`Tabuada de ${numero}: <br>`);
+        
+        // Laço para calcular e mostrar a tabuada
+        for (let i = 1; i <= 10; i++) {
+            let resultado = numero * i;  // Calcula o resultado da multiplicação
+            document.write(`${numero} X ${i} = ${resultado} <br>`);  // Exibe a tabuada no formato desejado
+        }
+    } else {
+        document.write("Por favor, informe um número entre 1 e 10.");
+    }
+}
+
+// Chama a função para gerar a tabuada
+gerarTabuada();
 
 14. Faça um programa que peça dois números, base e expoente, calcule e mostre o primeiro
 número elevado ao segundo número. Não utilize a função de potência da linguagem.
