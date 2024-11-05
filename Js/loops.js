@@ -23,6 +23,24 @@ for (var i = 0 ; i <101 ; i++){document.write(i + " ")}
 3. Faça um programa que leia um nome de usuário e a sua senha e não aceite a senha igual ao
 nome do usuário, mostrando uma mensagem de erro e voltando a pedir as informações.
 
+  // Função para solicitar o nome de usuário e senha
+function pedirUsuarioESenha() {
+  let usuario, senha;
+  
+  // Loop até que a senha seja diferente do nome de usuário
+  while (true) {
+    usuario = prompt("Digite o nome de usuário:");
+    senha = prompt("Digite a senha:");
+
+    // Verifica se a senha é igual ao nome de usuário
+    if (usuario === senha) {
+      alert("Erro: A senha não pode ser igual ao nome de usuário. Tente novamente.");
+    } else {
+      alert("Cadastro realizado com sucesso!");
+      break; // Sai do loop quando a senha for válida
+    }
+  }
+}
   
 4. Faça um programa que leia e valide as seguintes informações:
 a. Nome: maior que 3 caracteres;
