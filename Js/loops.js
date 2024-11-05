@@ -101,15 +101,7 @@ crescimento de 1.5%. Faça um programa que calcule e escreva o número de anos n
 que a população do país A ultrapasse ou iguale a população do país B, mantidas as taxas de
 crescimento.
 
-  // 5. Supondo que a população de um país A seja da ordem de 80000 
-// habitantes com uma taxa anual
-// de crescimento de 3% e que a população de B seja 200000 
-// habitantes com uma taxa de
-// crescimento de 1.5%. Faça um programa que calcule e escreva 
-//o número de anos necessários para
-// que a população do país A ultrapasse ou iguale a população do país B, 
-// mantidas as taxas de
-// crescimento.
+
 
 function calcularAnosParaIgualarPopulacao(populacaoA, populacaoB, taxaCrescimentoA, taxaCrescimentoB) {
     let anos = 0;
@@ -137,6 +129,49 @@ document.write(`Será necessário(s) ${anos} ano(s) para a população de A ultr
   
 6. Altere o programa anterior permitindo ao usuário informar as populações e as taxas de
 crescimento iniciais. Valide a entrada e permita repetir a operação.
+
+  function calcularAnosParaIgualarPopulacao(populacaoA, populacaoB, taxaCrescimentoA, taxaCrescimentoB) {
+    let anos = 0;
+    // Enquanto a população de A for menor que a de B
+    while (populacaoA < populacaoB) {
+        populacaoA *= (1 + taxaCrescimentoA / 100);  // Atualiza a população de A com base na taxa de crescimento
+        populacaoB *= (1 + taxaCrescimentoB / 100);  // Atualiza a população de B com base na taxa de crescimento
+        anos++;  // Incrementa o número de anos
+    }
+    return anos;
+}
+
+function pedirNumeroValido(mensagem, minimo) {
+    let numero;
+    do {
+        numero = parseFloat(prompt(mensagem)); // Solicita a entrada do usuário
+        if (isNaN(numero) || numero <= minimo) {
+            alert(`Por favor, insira um valor válido maior que ${minimo}.`);
+        }
+    } while (isNaN(numero) || numero <= minimo); // Valida que o número seja válido e maior que o valor mínimo
+    return numero;
+}
+
+function executarPrograma() {
+    do {
+        // Solicita as entradas do usuário
+        let populacaoA = pedirNumeroValido("Informe a população inicial do país A (maior que 0):", 0);
+        let populacaoB = pedirNumeroValido("Informe a população inicial do país B (maior que 0):", 0);
+        let taxaCrescimentoA = pedirNumeroValido("Informe a taxa de crescimento anual do país A (%):", 0);
+        let taxaCrescimentoB = pedirNumeroValido("Informe a taxa de crescimento anual do país B (%):", 0);
+
+        // Calcula o número de anos necessários para a população A ultrapassar ou igualar a população B
+        let anos = calcularAnosParaIgualarPopulacao(populacaoA, populacaoB, taxaCrescimentoA, taxaCrescimentoB);
+
+        // Exibe o resultado
+        alert(`Será necessário(s) ${anos} ano(s) para a população de A ultrapassar ou igualar a população de B.`);
+        
+        // Pergunta se o usuário deseja fazer outra simulação
+        var repetir = prompt("Deseja realizar outra simulação? (sim/nao)").toLowerCase();
+    } while (repetir === "sim"); // Se o usuário responder 'sim', a operação será repetida
+}
+
+executarPrograma();
 
   
 7. Faça um programa que imprima na tela os números de 1 a 20, um abaixo do outro. Depois
