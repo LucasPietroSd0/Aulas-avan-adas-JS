@@ -177,14 +177,53 @@ executarPrograma();
 7. Faça um programa que imprima na tela os números de 1 a 20, um abaixo do outro. Depois
 modifique o programa para que ele mostre os números um ao lado do outro.
 
+  for(let i = 1; i < 21 ;i++ ){
+  document.write(i)
+}
+document.write("<br><br>")
+for (let i = 1; i < 21; i++) {
+   
+    document.write(i + "<br>")
+}
   
 8. Faça um programa que leia 5 números e informe o maior número.
 
+  function encontrarMaiorNumero() {
+    let maiorNumero = -Infinity; // Inicializa com o menor número possível
+    // Laço para ler 5 números
+    for (let i = 1; i <= 5; i++) {
+     // Solicita o número e converte para um valor numérico
+     let numero = parseFloat(prompt(`Informe o ${i}º número:`));
+
+        // Verifica se o número é maior que o atual maior número
+    if (numero > maiorNumero) {
+       maiorNumero = numero; // Atualiza o maior número
+        }
+    }
+
+    // Exibe o maior número
+    alert(`O maior número informado foi: ${maiorNumero}`);
+}
+
+// Chama a função
+encontrarMaiorNumero();
   
 9. Faça um programa que leia 5 números e informe a soma e a média dos números.
 
+var numero =0; 
+for(let i = 0 ; i <5 ;i++ ){
+  var numero1 = parseInt(prompt("digite um numero"))
+  parseInt(numero)
+numero += numero1;
+
+}
+var media = numero / 5;
+document.write("A soma total dos numeros é : "+numero)
+document.write("<br>")
+document.write("A media dos numeros é : " +media)
   
 10. Faça um programa que imprima na tela apenas os números ímpares entre 1 e 50.
+
 
   
 11. Faça um programa que receba dois números inteiros e gere os números inteiros que estão no
