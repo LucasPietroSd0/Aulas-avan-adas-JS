@@ -51,6 +51,50 @@ e. Estado Civil: 's', 'c', 'v', 'd';
 Dica: se sua variável é texto, o tamanho dela está armazenado em: texto.length
 
 
+function teste(){
+var nome , idade, salario , sexo ,estadocivil;
+
+
+while (true){
+nome = prompt("digite seu nome")
+if (nome.length > 3){
+  break;
+}else {alert ("Erro: O nome deve ter mais que 3 caracteres. Tente novamente.")}
+}
+
+while (true){
+  idade = parseInt(prompt("digite sua idade"))
+
+  if(idade > 0 && idade <= 150){
+break;
+  }
+  else {alert("digite uma idade entre 0 e 150")}
+}
+
+while (true){
+salario = parseInt(prompt("digite seu salario"))
+
+if(salario > 0 ){break;} 
+else{alert("digite um salario maior que 0")}
+}
+
+while (true){
+  sexo = prompt("digite seu sexo")
+
+if (sexo == "f" || sexo == "m" || sexo == "F"||sexo == "M" ){break;}
+else{alert("sexo tem que ser m ou f")}
+
+}
+while (true){
+  estadocivil = prompt("digite seu estado civil")
+
+if(estadocivil == "s" || estadocivil == "c" || estadocivil == "v" ||estadocivil == "d"){break;}
+  else(alert("digite uma letra 's', 'c', 'v', 'd'"))
+}alert(`Informações cadastradas com sucesso!\nNome: ${nome}\nIdade: ${idade}\nSalário: R$ ${salario.toFixed(2)}\nSexo: ${sexo}\nEstado Civil: ${estadocivil}`);
+
+}
+teste()
+
 5. Supondo que a população de um país A seja da ordem de 80000 habitantes com uma taxa anual
 de crescimento de 3% e que a população de B seja 200000 habitantes com uma taxa de
 crescimento de 1.5%. Faça um programa que calcule e escreva o número de anos necessários para
