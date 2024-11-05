@@ -101,6 +101,39 @@ crescimento de 1.5%. Faça um programa que calcule e escreva o número de anos n
 que a população do país A ultrapasse ou iguale a população do país B, mantidas as taxas de
 crescimento.
 
+  // 5. Supondo que a população de um país A seja da ordem de 80000 
+// habitantes com uma taxa anual
+// de crescimento de 3% e que a população de B seja 200000 
+// habitantes com uma taxa de
+// crescimento de 1.5%. Faça um programa que calcule e escreva 
+//o número de anos necessários para
+// que a população do país A ultrapasse ou iguale a população do país B, 
+// mantidas as taxas de
+// crescimento.
+
+function calcularAnosParaIgualarPopulacao(populacaoA, populacaoB, taxaCrescimentoA, taxaCrescimentoB) {
+    let anos = 0;
+    // Enquanto a população de A for menor que a de B
+    while (populacaoA < populacaoB) {
+        populacaoA *= (1 + taxaCrescimentoA / 100);  // Atualiza a população de A com base na taxa de crescimento
+        populacaoB *= (1 + taxaCrescimentoB / 100);  // Atualiza a população de B com base na taxa de crescimento
+        anos++;  // Incrementa o número de anos
+    }
+    return anos;
+}
+
+// Dados do problema
+let populacaoA = 80000;      // População inicial do país A
+let populacaoB = 200000;     // População inicial do país B
+let taxaCrescimentoA = 3;    // Taxa de crescimento anual do país A
+let taxaCrescimentoB = 1.5;  // Taxa de crescimento anual do país B
+
+// Calculando o número de anos necessários
+let anos = calcularAnosParaIgualarPopulacao(populacaoA, populacaoB, taxaCrescimentoA, taxaCrescimentoB);
+
+document.write(`Será necessário(s) ${anos} ano(s) para a população de A ultrapassar ou igualar a população de B.`);
+
+
   
 6. Altere o programa anterior permitindo ao usuário informar as populações e as taxas de
 crescimento iniciais. Valide a entrada e permita repetir a operação.
