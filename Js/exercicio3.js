@@ -313,9 +313,60 @@ gerarTabuada();
 14. Faça um programa que peça dois números, base e expoente, calcule e mostre o primeiro
 número elevado ao segundo número. Não utilize a função de potência da linguagem.
 
+// 14. Faça um programa que peça dois números, base e expoente, calcule e mostre o primeiro
+// número elevado ao segundo número. Não utilize a função de potência da linguagem.
+
+// Solicita a entrada de base e expoente
+let base = parseFloat(prompt("Digite a base:"));
+let expoente = parseInt(prompt("Digite o expoente:"));
+
+// Inicializa o resultado como 1
+let resultado = 1;
+// Se o expoente for positivo, multiplica a base pelo número de vezes
+if (expoente > 0) {
+    for (let i = 0; i < expoente; i++) {
+        resultado *= base;
+    }
+}
+// Se o expoente for negativo, calcula a potência como 1/(base^(-expoente))
+else if (expoente < 0) {
+    for (let i = 0; i < Math.abs(expoente); i++) {
+        resultado *= base;
+    }
+    resultado = 1 / resultado;
+}
+// Se o expoente for zero, o resultado é sempre 1
+else {
+    resultado = 1;
+}
+
+// Exibe o resultado
+alert(`${base} elevado a ${expoente} é ${resultado}`);
+
+  
 15. Faça um programa que peça 10 números inteiros, calcule e mostre a quantidade de números
 pares e a quantidade de números ímpares.
 
+  // 15. Faça um programa que peça 10 números inteiros, 
+// calcule e mostre a quantidade de números
+// pares e a quantidade de números ímpares.
+
+var numero ;
+var contadorpar=0;
+var contadorimpar=0;
+for(var i= 0 ; i <10 ;i++){
+  numero = parseInt(prompt("digite um numero"))
+
+if(numero % 2 === 0){
+  contadorpar ++
+document.write(`${numero} é um número par.<br>`)}
+
+else {
+    document.write(`${numero} é um número ímpar.<br>`)
+    contadorimpar++}
+
+}
+document.write(`quantidade de numeros par : ${contadorpar} <br> quantidade de numeros impares ${contadorimpar}`)
   
 16. A série de Fibonacci é formada pela sequência 1,1,2,3,5,8,13,21,34,55,... Faça um programa
 capaz de gerar a série até o n−ésimo termo.
