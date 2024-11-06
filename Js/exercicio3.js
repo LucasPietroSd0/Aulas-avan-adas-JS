@@ -20,8 +20,8 @@ alert("Você digitou uma nota válida: " + numero);
 
 for (var i = 0 ; i <101 ; i++){document.write(i + " ")}
 
-3. Faça um programa que leia um nome de usuário e a sua senha e não aceite a senha igual ao
-nome do usuário, mostrando uma mensagem de erro e voltando a pedir as informações.
+//3. Faça um programa que leia um nome de usuário e a sua senha e não aceite a senha igual ao
+//nome do usuário, mostrando uma mensagem de erro e voltando a pedir as informações.
 
   // Função para solicitar o nome de usuário e senha
 function pedirUsuarioESenha() {
@@ -42,7 +42,7 @@ function pedirUsuarioESenha() {
   }
 }
   
-4. Faça um programa que leia e valide as seguintes informações:
+//4. Faça um programa que leia e valide as seguintes informações:
 a. Nome: maior que 3 caracteres;
 b. Idade: entre 0 e 150;
 c. Salário: maior que zero;
@@ -95,11 +95,11 @@ if(estadocivil == "s" || estadocivil == "c" || estadocivil == "v" ||estadocivil 
 }
 teste()
 
-5. Supondo que a população de um país A seja da ordem de 80000 habitantes com uma taxa anual
-de crescimento de 3% e que a população de B seja 200000 habitantes com uma taxa de
-crescimento de 1.5%. Faça um programa que calcule e escreva o número de anos necessários para
-que a população do país A ultrapasse ou iguale a população do país B, mantidas as taxas de
-crescimento.
+//5. Supondo que a população de um país A seja da ordem de 80000 habitantes com uma taxa anual
+//de crescimento de 3% e que a população de B seja 200000 habitantes com uma taxa de
+//crescimento de 1.5%. Faça um programa que calcule e escreva o número de anos necessários para
+//que a população do país A ultrapasse ou iguale a população do país B, mantidas as taxas de
+//crescimento.
 
 
 
@@ -127,8 +127,8 @@ document.write(`Será necessário(s) ${anos} ano(s) para a população de A ultr
 
 
   
-6. Altere o programa anterior permitindo ao usuário informar as populações e as taxas de
-crescimento iniciais. Valide a entrada e permita repetir a operação.
+//6. Altere o programa anterior permitindo ao usuário informar as populações e as taxas de
+//crescimento iniciais. Valide a entrada e permita repetir a operação.
 
   function calcularAnosParaIgualarPopulacao(populacaoA, populacaoB, taxaCrescimentoA, taxaCrescimentoB) {
     let anos = 0;
@@ -174,8 +174,8 @@ function executarPrograma() {
 executarPrograma();
 
   
-7. Faça um programa que imprima na tela os números de 1 a 20, um abaixo do outro. Depois
-modifique o programa para que ele mostre os números um ao lado do outro.
+//7. Faça um programa que imprima na tela os números de 1 a 20, um abaixo do outro. Depois
+//modifique o programa para que ele mostre os números um ao lado do outro.
 
   for(let i = 1; i < 21 ;i++ ){
   document.write(i)
@@ -186,7 +186,7 @@ for (let i = 1; i < 21; i++) {
     document.write(i + "<br>")
 }
   
-8. Faça um programa que leia 5 números e informe o maior número.
+//8. Faça um programa que leia 5 números e informe o maior número.
 
   function encontrarMaiorNumero() {
     let maiorNumero = -Infinity; // Inicializa com o menor número possível
@@ -208,7 +208,7 @@ for (let i = 1; i < 21; i++) {
 // Chama a função
 encontrarMaiorNumero();
   
-9. Faça um programa que leia 5 números e informe a soma e a média dos números.
+//9. Faça um programa que leia 5 números e informe a soma e a média dos números.
 
 var numero =0; 
 for(let i = 0 ; i <5 ;i++ ){
@@ -222,7 +222,7 @@ document.write("A soma total dos numeros é : "+numero)
 document.write("<br>")
 document.write("A media dos numeros é : " +media)
   
-10. Faça um programa que imprima na tela apenas os números ímpares entre 1 e 50.
+//10. Faça um programa que imprima na tela apenas os números ímpares entre 1 e 50.
 
 for (let i = 1; i <= 50; i++) {
     if (i % 2 !== 0) {  // Verifica se o número é ímpar
@@ -230,8 +230,8 @@ for (let i = 1; i <= 50; i++) {
     }
 }
   
-11. Faça um programa que receba dois números inteiros e gere os números inteiros que estão no
-intervalo compreendido por eles.
+//11. Faça um programa que receba dois números inteiros e gere os números inteiros que estão no
+//intervalo compreendido por eles.
 
   function gerarIntervalo() {
     // Solicita os números ao usuário e os converte para inteiros
@@ -251,7 +251,7 @@ intervalo compreendido por eles.
 // Chama a função
 gerarIntervalo();
   
-12. Altere o programa anterior para mostrar no final a soma dos números.
+//12. Altere o programa anterior para mostrar no final a soma dos números.
 
   // Função para gerar números no intervalo entre dois números e calcular a soma
 function gerarIntervaloESomar() {
@@ -279,9 +279,9 @@ function gerarIntervaloESomar() {
 gerarIntervaloESomar();
 
   
-13. Desenvolva um gerador de tabuada, capaz de gerar a tabuada de qualquer número inteiro
-entre 1 a 10. O usuário deve informar de qual numero ele deseja ver a tabuada. A saída deve ser
-conforme o exemplo abaixo:
+//13. Desenvolva um gerador de tabuada, capaz de gerar a tabuada de qualquer número inteiro
+//entre 1 a 10. O usuário deve informar de qual numero ele deseja ver a tabuada. A saída deve ser
+//conforme o exemplo abaixo:
 a. Tabuada de 5:
 5 X 1 = 5
 5 X 2 = 10
@@ -310,8 +310,8 @@ function gerarTabuada() {
 // Chama a função para gerar a tabuada
 gerarTabuada();
 
-14. Faça um programa que peça dois números, base e expoente, calcule e mostre o primeiro
-número elevado ao segundo número. Não utilize a função de potência da linguagem.
+//14. Faça um programa que peça dois números, base e expoente, calcule e mostre o primeiro
+//número elevado ao segundo número. Não utilize a função de potência da linguagem.
 
 // 14. Faça um programa que peça dois números, base e expoente, calcule e mostre o primeiro
 // número elevado ao segundo número. Não utilize a função de potência da linguagem.
@@ -344,9 +344,6 @@ else {
 alert(`${base} elevado a ${expoente} é ${resultado}`);
 
   
-15. Faça um programa que peça 10 números inteiros, calcule e mostre a quantidade de números
-pares e a quantidade de números ímpares.
-
   // 15. Faça um programa que peça 10 números inteiros, 
 // calcule e mostre a quantidade de números
 // pares e a quantidade de números ímpares.
@@ -368,23 +365,128 @@ else {
 }
 document.write(`quantidade de numeros par : ${contadorpar} <br> quantidade de numeros impares ${contadorimpar}`)
   
-16. A série de Fibonacci é formada pela sequência 1,1,2,3,5,8,13,21,34,55,... Faça um programa
-capaz de gerar a série até o n−ésimo termo.
-Sequência de Fibonacci com laços
+//16. A série de Fibonacci é formada pela sequência 1,1,2,3,5,8,13,21,34,55,... Faça um programa
+//capaz de gerar a série até o n−ésimo termo.
+//Sequência de Fibonacci com laços
 
+function fibonacci(n) {
+    // Verifica se o valor de n é válido
+    if (n <= 0) {
+        document.write("O número de termos deve ser maior que 0.");
+        return;
+    }
+    
+    // Inicializa os dois primeiros termos da sequência de Fibonacci
+    let a = 1, b = 1;
+
+    // Imprime os primeiros termos
+    document.write("Sequência de Fibonacci:");
+
+    if (n >= 1) document.write(a);  // Imprime o primeiro termo
+    if (n >= 2) document.write(b);  // Imprime o segundo termo
+
+    // Gera os próximos termos usando laço
+    for (let i = 3; i <= n; i++) {
+        let nextTerm = a + b;  // Calcula o próximo termo
+        document.write(nextTerm);  // Imprime o próximo termo
+
+        // Atualiza os valores de a e b para os próximos cálculos
+        a = b;
+        b = nextTerm;
+    }
+}
+
+// Solicita o número de termos ao usuário
+let n = parseInt(prompt("Digite o número de termos da sequência de Fibonacci:"));
+
+// Chama a função para gerar a sequência de Fibonacci
+fibonacci(n);
 
 17. A série de Fibonacci é formada pela sequência 0,1,1,2,3,5,8,13,21,34,55,... Faça um programa
 que gere a série até que o valor seja maior que 500.
 
+// Função para gerar a sequência de Fibonacci até o primeiro número maior que 500
+function fibonacciAte500() {
+    let a = 0;  // Primeiro termo da sequência
+    let b = 1;  // Segundo termo da sequência
+
+    document.write("Sequência de Fibonacci até que o número seja maior que 500:");
+
+    // Imprime os primeiros termos
+    document.write(a);  // Imprime 0
+     document.write(b);  // Imprime 1
+
+    // Enquanto o próximo número for menor ou igual a 500, continua calculando
+    while (true) {
+        let nextTerm = a + b;  // Calcula o próximo número
+
+        // Se o próximo termo for maior que 500, para o loop
+        if (nextTerm > 500) {
+            break;
+        }
+
+        // Imprime o próximo termo da sequência
+        document.write(nextTerm);
+
+        // Atualiza os valores de a e b
+        a = b;
+        b = nextTerm;
+    }
+}
+
+// Chama a função para gerar a sequência de Fibonacci até 500
+fibonacciAte500();
 
 18. Faça um programa que calcule o fatorial de um número inteiro fornecido pelo usuário. Ex.:
 5!=5.4.3.2.1=120
 Calcular fatorial com laços
 
-  
-19. Faça um programa que, dado um conjunto de N números, determine o menor valor, o maior
-valor e a soma dos valores.
+// Função para calcular o fatorial de um número
+function calcularFatorial(numero) {
+    if (numero < 0) {
+        return "Fatorial não definido para números negativos.";
+    }
 
+    let fatorial = 1;
+
+    // Laço que calcula o fatorial
+    for (let i = 1; i <= numero; i++) {
+        fatorial *= i;  // Multiplica o número atual pelo acumulado
+    }
+
+    return fatorial;
+}
+
+// Solicita ao usuário o número para calcular o fatorial
+let numero = parseInt(prompt("Digite um número para calcular o fatorial:"));
+
+// Chama a função e exibe o resultado
+let resultado = calcularFatorial(numero);
+alert(`${numero}! = ${resultado}`);
+
+
+
+  
+//19. Faça um programa que, dado um conjunto de N números, determine o menor valor, o maior
+//valor e a soma dos valores.
+
+  var maior = -Infinity;
+var menor = Infinity;
+
+for(var i = 0 ; i<4 ; i++)
+{
+  var numero = parseInt(prompt("digite um numero"))
+ if(numero > maior){
+    maior = numero
+  }
+  if (numero < menor){
+    menor = numero
+  } 
+}
+ 
+   document.write(`esse é o maior numero: ${maior}`)
+ document.write("<br>")
+   document.write(`esse é o menor numero: ${menor}`)
   
 20. Altere o programa anterior para que ele aceite apenas números entre 0 e 1000.
 
