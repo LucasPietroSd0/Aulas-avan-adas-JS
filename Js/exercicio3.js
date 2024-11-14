@@ -717,15 +717,15 @@ document.write(`A média das ${N} notas é: ${media.toFixed(2)}<br>`);
 
 document.write("Questão 26<br>");
 
-var n = parseInt(prompt("Digite o número de pessoas:"));
+var nuq = parseInt(prompt("Digite o número de pessoas:"));
 var somaIdades = 0;
 
-for (var i = 1; i <= n; i++) {
+for (var i = 1; i <= nuq; i++) {
   var idade = parseInt(prompt(`Digite a idade da pessoa ${i}:`));
   somaIdades += idade; // Soma as idades de todas as pessoas
 }
 
-var mediaIdades = somaIdades / n; // Calcula a média das idades
+var mediaIdades = somaIdades / nuq; // Calcula a média das idades
 
 document.write(`A média de idade da turma é: ${mediaIdades.toFixed(2)}<br>`);
 
